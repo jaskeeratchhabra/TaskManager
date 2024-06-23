@@ -14,7 +14,7 @@ function TaskForm() {
     if (id) {
       const fetchTask = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/tasks/${id}`);
+          const response = await axios.get(`https://task-manager-jaskeeratchhabras-projects.vercel.app/tasks/${id}`);
           setTitle(response.data.title);
           setDescription(response.data.description);
           setDueDate(response.data.dueDate);
@@ -32,9 +32,9 @@ function TaskForm() {
     try {
       setLoading(true)
       if (id) {
-        await axios.put(`http://localhost:8000/tasks/${id}`, task);
+        await axios.put(`https://task-manager-jaskeeratchhabras-projects.vercel.app/tasks/${id}`, task);
       } else {
-        await axios.post('http://localhost:8000/tasks', task);
+        await axios.post('https://task-manager-jaskeeratchhabras-projects.vercel.app/tasks', task);
       }
       navigate('/');
     } catch (error) {
