@@ -1,13 +1,9 @@
 {
     "version": 2,
-    "name": "your-react-app",
     "builds": [
       {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "build"
-        }
+        "src": "src/**/*",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
