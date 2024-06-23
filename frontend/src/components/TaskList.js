@@ -17,7 +17,7 @@ function TaskList() {
       }
     };
     fetchTasks();
-  }, []);
+  }, [tasks]);
 
   const deleteTask = async (id) => {
     try {
