@@ -10,7 +10,7 @@ function TaskList() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('https://task-manager-jaskeeratchhabras-projects.vercel.app/tasks');
+        const response = await axios.get('https://task-manager-backend-jaskeeratchhabras-projects.vercel.app/tasks');
         setTasks(response.data);
       } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -22,7 +22,7 @@ function TaskList() {
   const deleteTask = async (id) => {
     try {
       setLoading(true);
-      await axios.delete(`https://task-manager-jaskeeratchhabras-projects.vercel.app/tasks/${id}`);
+      await axios.delete(`https://task-manager-backend-jaskeeratchhabras-projects.vercel.app/tasks/${id}`);
       setTasks(tasks.filter(task => task._id !== id));
     } catch (error) {
       console.error('Error deleting task:', error);
